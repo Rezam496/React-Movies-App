@@ -1,17 +1,22 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { LiaTimesSolid } from "react-icons/lia";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   const [isOpenMenu,setIsOpenMenu]=useState(false);
-  const listMenu=["Movies","TV Shows","People","More"] 
+  const listMenu=["Movies","","People"] 
   return (
     <>
     <nav className="flex  items-center text-slate-400 bg-slate-900 p-4 md:container md:bg-transparent ">
        <div className="flex items-center ">
-            <h1 className="text-2xl mr-8 text-white">React <span className="text-red-500">Movies</span> App</h1>
+        <Link to="/">
+            <h1 className="text-2xl mr-8 text-white cursor-pointer">React <span className="text-red-500">Movies</span> App</h1>
+        </Link>
             <ul className="hidden md:flex text-sm lg:text-base gap-4 uppercase">
-              {listMenu.map((i)=><li><a href="#">{i}</a></li>)}
+              <li><Link to="./movies">Movies</Link></li>
+              <li><Link to="./tv">TV Shows</Link></li>
+              <li><Link to="./people">People</Link></li>
             </ul>
         </div>
         <div className="hidden md:block lg:text-base ml-auto uppercase">

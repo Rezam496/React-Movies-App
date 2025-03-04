@@ -5,7 +5,7 @@ function HomePage() {
 
   return (
   <div>
-    <Header/>
+    {/* <Header/> */}
     <Main/>    
   </div>
   )
