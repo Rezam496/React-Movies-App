@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
   const [isOpenMenu,setIsOpenMenu]=useState(false);
-  const listMenu=["Movies","","People"] 
+  
   return (
     <>
     <nav className="flex  items-center text-slate-400 bg-slate-900 p-4 md:container md:bg-transparent ">
@@ -35,13 +35,15 @@ function Navigation() {
         </div>
     </nav>
 
-    <div className={`md:hidden bg-slate-900 text-center overflow-hidden transition-all duration-300 text-slate-300 ${
+    <div onClick={()=>setIsOpenMenu(false)} className={`md:hidden bg-slate-900 text-center overflow-hidden transition-all duration-300 text-slate-300 ${
       isOpenMenu?"h-full py-4 border-t-2 border-stone-700" 
       : "py-0 h-0  border-none"}`}
       style={{height:isOpenMenu?255:0}}
       >
       <ul className="flex flex-col gap-3">
-       {listMenu.map((i)=><li><a href="#">{i}</a></li>)}
+        <li><Link to="./movies">Movies</Link></li>
+        <li><Link to="./tv">TV Shows</Link></li>
+        <li><Link to="./people">People</Link></li>
       </ul>
       <div className="mt-8 flex gap-4 justify-center items-center border-t-2 pt-4 border-slate-700">
           <a href="#" className="text-xl ">Login</a>
