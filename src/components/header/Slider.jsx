@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay ,  } from 'swiper/modules';
 import { options } from '../../api/url';
 import axios from 'axios';
+import { shortenText } from '../../helper/helper';
 
 function Slider({setBackground}) {
     const [data,setData]=useState([])
@@ -36,12 +37,12 @@ function Slider({setBackground}) {
          <SwiperSlide key={i.id} onMouseOver={(e)=>setBackground(`https://image.tmdb.org/t/p/w500${i.backdrop_path}`)}>
             <img src={`https://image.tmdb.org/t/p/w500${i.backdrop_path}`} alt='turn on VPN' className="w-full rounded-lg " />
             <div className="absolute bottom-0 left-0 bg-black bg-opacity-60 w-full text-white p-2 ">
-                <h3 className="text-lg  font-semibold">{i.title}</h3>
+                <h3 className="text-lg  font-semibold">{shortenText(i.title)}</h3>
                 <div className="flex items-center">
-                    <span className="mr-2">★ {i.vote_average}</span>
-                    <span>({i.vote_count} votes)</span>
+                    <span className="mr-2 text-yellow-300">{`★ ${i.vote_average.toFixed(1)}/10`}</span>
+                    
                 </div>
-                <div className="mt-1 text-sm">Rated: {i.adult ? "Adult" : "All Ages"}</div>
+                
             </div>
         </SwiperSlide>
         )}
