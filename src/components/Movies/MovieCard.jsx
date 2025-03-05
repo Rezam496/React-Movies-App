@@ -2,9 +2,9 @@ import React from 'react'
 import { shortenText } from '../../helper/helper'
 
 function MovieCard({item}) {
-  console.log(item)
+  
   return (
-    <div className=" shadow-md rounded-lg overflow-hidden mb-4 h-full bg-slate-600">
+    <div className=" shadow-md rounded-lg overflow-hidden mb-4 h-full bg-slate-600 cursor-pointer">
       <div>
       <img
         src={item.poster_path ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : 'default_image_url_here'}

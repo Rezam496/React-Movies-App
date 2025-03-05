@@ -8,7 +8,7 @@ function Navigation() {
   
   return (
     <>
-    <nav className="flex  items-center text-slate-400 bg-slate-900 p-4 md:container md:bg-transparent ">
+    <nav id="scrollElement" className={`flex  items-center text-slate-400 bg-slate-900 p-4 md:container md:bg-transparent`}>
        <div className="flex items-center ">
         <Link to="/">
             <h1 className="text-2xl mr-8 text-white cursor-pointer">React <span className="text-red-500">Movies</span> App</h1>
