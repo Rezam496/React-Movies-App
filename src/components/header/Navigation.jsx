@@ -22,7 +22,7 @@ function Navigation() {
         <div className="hidden md:block lg:text-base ml-auto uppercase">
             <ul className="flex gap-4">
                 <li><Link to="/login">Login</Link></li>
-                <li><Link to="signup" className="bg-red-700 hover:bg-rose-500 px-6 py-3 rounded-3xl text-white">Sign up</Link></li>
+                <li><Link to="/signup" className="bg-red-700 hover:bg-rose-500 px-6 py-3 rounded-3xl text-white">Sign up</Link></li>
             </ul>
         </div>
 
@@ -46,8 +46,8 @@ function Navigation() {
         <li><Link to="./people">People</Link></li>
       </ul>
       <div className="mt-8 flex gap-4 justify-center items-center border-t-2 pt-4 border-slate-700">
-          <a href="#" className="text-xl ">Login</a>
-          <a href="#" className="bg-red-700 hover:bg-rose-500 px-4 py-2 rounded-3xl text-white">Sign up</a>
+          <Link to="/login" className="text-xl ">Login</Link>
+          <Link to="/signup" className="bg-red-700 hover:bg-rose-500 px-4 py-2 rounded-3xl text-white">Sign up</Link>
       </div>
     </div>
     </>

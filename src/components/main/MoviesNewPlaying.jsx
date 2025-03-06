@@ -37,7 +37,7 @@ function MoviesNewPlaying() {
           }
       }}
         modules={[Autoplay,Navigation,FreeMode]}
-        navigation={true}
+        // navigation={true}
         freeMode
         centeredSlides
         autoplay={{delay:4000}}

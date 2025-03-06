@@ -1,4 +1,3 @@
-
 import Navigation from './Navigation'
 import SearchBox from './SearchBox'
 import FollowUs from './FollowUs'

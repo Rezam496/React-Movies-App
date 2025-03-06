@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay , Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
+
 function MoviesList() {
     const [data,setData]=useState([])
     useEffect(()=>{
@@ -33,7 +34,7 @@ function MoviesList() {
           }
       }}
         modules={[Autoplay,Navigation]}
-        navigation={true}
+        // navigation={true}
         autoplay={{delay:6000}}
         loop
         centeredSlides
@@ -42,9 +43,11 @@ function MoviesList() {
           <div className="overflow-x-auto whitespace-nowrap py-4 mt-10">
             {data.results?.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="mr-4 w-40 xl:w-48 md:w36">
-                  <MovieCard item={item} />
-                </div>
+                
+                  <div className="mr-4 w-40 xl:w-48 md:w36">
+                    <MovieCard item={item} />
+                  </div>
+                
               </SwiperSlide>
             ))}
           </div>

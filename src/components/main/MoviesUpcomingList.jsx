@@ -36,7 +36,7 @@ function MoviesUpcomingList() {
           }
       }}
         modules={[Autoplay,Navigation]}
-        navigation={true}
+        // navigation={true}
         autoplay={{delay:4000}}
         centeredSlides
         loop
