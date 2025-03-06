@@ -21,8 +21,8 @@ function Navigation() {
         </div>
         <div className="hidden md:block lg:text-base ml-auto uppercase">
             <ul className="flex gap-4">
-                <li><a href="#">Login</a></li>
-                <li><a href="#" className="bg-red-700 hover:bg-rose-500 px-6 py-3 rounded-3xl text-white">Sign up</a></li>
+                <li><Link to="/login">Login</Link></li>
+                <li><Link to="signup" className="bg-red-700 hover:bg-rose-500 px-6 py-3 rounded-3xl text-white">Sign up</Link></li>
             </ul>
         </div>
 
