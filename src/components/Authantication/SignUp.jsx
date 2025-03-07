@@ -3,7 +3,7 @@ import { FaLinkedin,FaFacebook } from "react-icons/fa";
 
 function SignUp() {
   return (
-    <div className=" w-full  flex  justify-center content-start" >
+    <div className=" w-full mt-20 flex  justify-center content-start" >
         
         <form action="" className="flex flex-col m-4 lg:w-1/3   bg-slate-500 lg:gap-4 p-6 rounded-xl">
             <div className="flex justify-center"><h3 className="lg:text-3xl">Create Account</h3></div>

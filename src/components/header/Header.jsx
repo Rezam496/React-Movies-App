@@ -1,26 +1,21 @@
 import Navigation from './Navigation'
 import SearchBox from './SearchBox'
 import FollowUs from './FollowUs'
-
-function Header({background}) {
-  
+import { useLocation } from 'react-router-dom';
+function Header() {
+  const location=useLocation();
   return (
-    <header
-      className=" bg-cover bg-center pb-8 md:py-8 "
-      style={{
-        backgroundImage: `linear-gradient(
-            to bottom,
-            rgb(30 41 59 / 81%),
-            rgb(30 41 59 / 53%),
-            rgb(30 41 59)
-        ), url(${background})`
-    }}
-    >
-        <Navigation/>
-      <div className="container md:py-12">
+    <header className=" bg-slate-900 ">
+      <div className="fixed top-0 left-0 right-0 z-20 ">
+      <Navigation/>
+      </div>
+      {location.pathname==="/"&&
+        <div className="container md:py-6 mt-20 bg-slate-900 opacity-85">
         <SearchBox/>
         <FollowUs/>
       </div>
+      }
+      
     </header>
   )
 }

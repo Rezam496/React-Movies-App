@@ -8,20 +8,20 @@ function Navigation() {
   
   return (
     <>
-    <nav id="scrollElement" className={`flex  items-center text-slate-400 bg-slate-900 p-4 md:container md:bg-transparent`}>
-       <div className="flex items-center ">
+    <nav className={`flex  items-center text-slate-400 bg-slate-900 px-4  h-20`}>
+       <div className="flex items-center w-3/4">
         <Link to="/">
             <h1 className="text-2xl mr-8 text-white cursor-pointer">React <span className="text-red-500">Movies</span> App</h1>
         </Link>
-            <ul className="hidden md:flex text-sm lg:text-base gap-4 uppercase">
-              <li><Link to="./movies">Movies</Link></li>
-              <li><Link to="./tv">TV Shows</Link></li>
-              <li><Link to="./people">People</Link></li>
+            <ul className="hidden md:flex text-sm lg:text-base gap-4 uppercase ">
+              <li className="hover:text-slate-100"><Link to="./movies">Movies</Link></li>
+              <li className="hover:text-slate-100"><Link to="./tv">TV Shows</Link></li>
+              <li className="hover:text-slate-100"><Link to="./people">People</Link></li>
             </ul>
         </div>
         <div className="hidden md:block lg:text-base ml-auto uppercase">
             <ul className="flex gap-4">
-                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/login" className="hover:text-slate-100">Login</Link></li>
                 <li><Link to="/signup" className="bg-red-700 hover:bg-rose-500 px-6 py-3 rounded-3xl text-white">Sign up</Link></li>
             </ul>
         </div>
@@ -38,7 +38,7 @@ function Navigation() {
     <div onClick={()=>setIsOpenMenu(false)} className={`md:hidden bg-slate-900 text-center overflow-hidden transition-all duration-300 text-slate-300 ${
       isOpenMenu?"h-full py-4 border-t-2 border-stone-700" 
       : "py-0 h-0  border-none"}`}
-      style={{height:isOpenMenu?255:0}}
+      style={{height:isOpenMenu?215:0}}
       >
       <ul className="flex flex-col gap-3">
         <li><Link to="./movies">Movies</Link></li>

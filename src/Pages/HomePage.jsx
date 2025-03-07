@@ -1,11 +1,9 @@
-import Header from "../components/header/Header"
 import Main from "../components/main/Main"
-
+import image from '../assets/bg.jpg'
 function HomePage() {
 
   return (
-  <div>
-    {/* <Header/> */}
+  <div> 
     <Main/>    
   </div>
   )
