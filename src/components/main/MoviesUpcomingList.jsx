@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react'
 import MovieCard from '../Movies/MovieCard'
-import { options } from '../../api/url'
-import axios from 'axios'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay ,Navigation  } from 'swiper/modules';
 import 'swiper/css/navigation';
+import { useQuery } from '@tanstack/react-query';
+import { fetchMoviesUpComing } from '../../Services/movieslist';
 
 function MoviesUpcomingList() {
-    const [upcoming,setUpcoming]=useState([])
-    useEffect(()=>{
-        axios.get('https://api.themoviedb.org/3/movie/upcoming', options).then((res)=>setUpcoming(res.data))
-    },[])
-    console.log(upcoming)
+
+  const{data:upcoming}= useQuery({
+    queryKey:["upcoming"],
+    queryFn:fetchMoviesUpComing
+  })
+
   return (
     <div className="container mx-auto px-4 py-6 ">
       <h2 className="text-2xl font-bold mb-8">🎬 UpComing Movies</h2>
@@ -43,7 +43,7 @@ function MoviesUpcomingList() {
         css-mode="true"
         >
           <div className="overflow-x-auto whitespace-nowrap py-4 mt-10">
-            {upcoming.results?.map((item) => (
+            {upcoming?.data.results.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="mr-4 w-40 xl:w-48 md:w36">
                   <MovieCard item={item} />

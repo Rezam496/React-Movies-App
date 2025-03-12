@@ -16,7 +16,6 @@ function Navigation() {
             <ul className="hidden md:flex text-sm lg:text-base gap-4 uppercase ">
               <li className="hover:text-slate-100"><Link to="./movies">Movies</Link></li>
               <li className="hover:text-slate-100"><Link to="./tv">TV Shows</Link></li>
-              <li className="hover:text-slate-100"><Link to="./people">People</Link></li>
             </ul>
         </div>
         <div className="hidden md:block lg:text-base ml-auto uppercase">
@@ -43,7 +42,6 @@ function Navigation() {
       <ul className="flex flex-col gap-3">
         <li><Link to="./movies">Movies</Link></li>
         <li><Link to="./tv">TV Shows</Link></li>
-        <li><Link to="./people">People</Link></li>
       </ul>
       <div className="mt-8 flex gap-4 justify-center items-center border-t-2 pt-4 border-slate-700">
           <Link to="/login" className="text-xl ">Login</Link>
