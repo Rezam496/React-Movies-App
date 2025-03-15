@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { LiaTimesSolid } from "react-icons/lia";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navigation() {
   const [isOpenMenu,setIsOpenMenu]=useState(false);
-  
+  const location=useLocation()
   return (
     <>
     <nav className={`flex  items-center text-slate-400 bg-slate-900 px-4  h-20`}>
@@ -14,8 +14,8 @@ function Navigation() {
             <h1 className="text-2xl mr-8 text-white cursor-pointer">React <span className="text-red-500">Movies</span> App</h1>
         </Link>
             <ul className="hidden md:flex text-sm lg:text-base gap-4 uppercase ">
-              <li className="hover:text-slate-100"><Link to="./movies">Movies</Link></li>
-              <li className="hover:text-slate-100"><Link to="./tv">TV Shows</Link></li>
+              <li className={`${location.pathname=="/movies"?"text-slate-100 ":"hover:text-slate-100"}`}><Link to="./movies">Movies</Link></li>
+              <li className={`${location.pathname=="/tv"?"text-slate-100":"hover:text-slate-100"}`}><Link to="./tv">TV Shows</Link></li>
             </ul>
         </div>
         <div className="hidden md:block lg:text-base ml-auto uppercase">
@@ -37,7 +37,7 @@ function Navigation() {
     <div onClick={()=>setIsOpenMenu(false)} className={`md:hidden bg-slate-900 text-center overflow-hidden transition-all duration-300 text-slate-300 ${
       isOpenMenu?"h-full py-4 border-t-2 border-stone-700" 
       : "py-0 h-0  border-none"}`}
-      style={{height:isOpenMenu?215:0}}
+      style={{height:isOpenMenu?180:0}}
       >
       <ul className="flex flex-col gap-3">
         <li><Link to="./movies">Movies</Link></li>

@@ -15,7 +15,7 @@ function MovieCard({item}) {
         />
         </div>
         <div className=" bottom-0 left-0 right-0 bg-gradient-to-t  via-transparent to-transparent p-2 ">
-          <h2 className="text-white text-base font-semibold">{shortenText(item.title)}</h2>
+          <h2 className="text-white text-base font-semibold overflow-hidden text-ellipsis whitespace-nowrap">{item.title}</h2>
           <span className="mr-2 text-yellow-300">{`★ ${item.vote_average.toFixed(1)}/10`}</span>
         </div>
       </div>

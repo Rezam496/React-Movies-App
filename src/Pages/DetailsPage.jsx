@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import { findId } from '../helper/helper';
 import { options } from '../api/url';
@@ -10,7 +10,6 @@ function DetailsPage() {
   const[movieData,setMovieData]=useState(null)
   const location=useLocation();
   const idCard=findId(location.pathname)
-
  
   useEffect(() => {
     const fetchMovieData = async () => {
