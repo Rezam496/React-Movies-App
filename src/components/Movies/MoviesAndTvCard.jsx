@@ -6,7 +6,7 @@ function MoviesAndTvCard({item}) {
     const location=useLocation();
   return (  
         <Link to={`/details/:${item.id}`} >
-              <div className="  shadow-md rounded-lg overflow-hidden  h-full w-36 md:w-48 lg:w-80  bg-slate-600 cursor-pointer">
+              <div className="  shadow-md rounded-lg overflow-hidden  h-full w-36 md:w-48 lg:w-80  bg-slate-600 cursor-pointer ">
                 <div className="relative">
                   <img
                     src={item.poster_path ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : 'default_image_url_here'}

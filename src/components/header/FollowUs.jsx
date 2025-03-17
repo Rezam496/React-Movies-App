@@ -2,7 +2,7 @@ import { FaYoutube,FaInstagram,FaFacebookF,FaTelegram } from "react-icons/fa6";
 
 function FollowUs() {
   return (
-    <section className="flex justify-start mt-4 pb-4 text-slate-200 text-xs xl:text-2xl">
+    <section className="flex justify-start mt-4 pb-4  text-xs xl:text-2xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white p-4">
         <div className="flex items-center  ">
         <span>FOLLOW US:</span>
         <ul className="flex gap-4 ml-4">

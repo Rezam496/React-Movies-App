@@ -8,24 +8,25 @@ import Movie from "./Pages/Movie"
 import Login from "./components/Authantication/Login"
 import SignUp from "./components/Authantication/SignUp"
 import { useState } from "react"
+import { ThemeProvider } from "./helper/ThemProvider"
 
 function App() {
   const[bg,setBg]=useState({image:"",id:""}) 
   return (
     <>
-    
-      <Layout bg={bg}>
-        <Routes>
-          <Route index element={<HomePage />} />
-          <Route path="/movies" element={<Movie/>}/>
-          <Route path="/tv" element={<TV/> }/>
-          <Route path="/details/:id" element={<DetailsPage setBg={setBg}/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/signup" element={<SignUp/>} />
-          <Route path="*" element={<PageNotFound/>} />
-        </Routes>
-      </Layout>
-    
+      <ThemeProvider>
+        <Layout bg={bg}>
+          <Routes>
+            <Route index element={<HomePage />} />
+            <Route path="/movies" element={<Movie/>}/>
+            <Route path="/tv" element={<TV/> }/>
+            <Route path="/details/:id" element={<DetailsPage setBg={setBg}/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/signup" element={<SignUp/>} />
+            <Route path="*" element={<PageNotFound/>} />
+          </Routes>
+        </Layout>
+      </ThemeProvider>
     </>
   )
 }

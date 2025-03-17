@@ -11,13 +11,13 @@ function Footer() {
   const Legal=["Privacy Policy","Terms &amp; Conditions","Returns Policy","Accessibility"]
 
   return (
-    <footer className="bg-gradient-to-r via-[#1d283a] mt-44">
+    <footer className="bg-gradient-to-r via-[#1d283a]  bg-white dark:bg-slate-900 text-slate-900 dark:text-white p-4">
       <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
 
           <div>
             <Link to="/">
-                <h1 className="text-2xl mr-8 text-white cursor-pointer">React <span className="text-red-500">Movies</span> App</h1>
+                <h1 className="text-2xl mr-8  cursor-pointer">React <span className="text-red-500">Movies</span> App</h1>
             </Link>
             <p className="max-w-xs mt-4 text-sm text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.

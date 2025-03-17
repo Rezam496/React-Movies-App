@@ -5,19 +5,19 @@ function Login() {
   return (
      <div className=" w-full mt-20 flex  justify-center content-start" >
             
-            <form action="" className="flex flex-col m-4 lg:w-1/3   bg-slate-500 lg:gap-4 p-6 rounded-xl">
-                <div className="flex justify-center"><h3 className="lg:text-3xl">Login</h3></div>
+            <form action="" className="flex flex-col m-4 lg:w-1/3  w-72  bg-slate-500 lg:gap-2 p-6 rounded-xl">
+                <div className="flex justify-center"><h3 className="lg:text-2xl">Login</h3></div>
                 
-                <label htmlFor="email" className="lg:text-2xl text-slate-300">E-mail:</label>
-                <input type="email"className="lg:h-14 rounded-lg outline-none bg-slate-600 text-slate-900 lg:text-xl lg:p-3 p-1 " />
-                <label htmlFor="password" className="lg:text-2xl text-slate-300">Password:</label>
-                <input type="password"className="lg:h-14 rounded-lg outline-none bg-slate-600 text-slate-900 lg:text-xl lg:p-3 p-1 " />
+                <label htmlFor="email" className="lg:text-xl text-slate-300">E-mail:</label>
+                <input type="email"className="lg:h-12 rounded-lg outline-none bg-slate-600 text-slate-900 lg:text-xl lg:p-3 p-1 " />
+                <label htmlFor="password" className="lg:text-xl text-slate-300">Password:</label>
+                <input type="password"className="lg:h-12 rounded-lg outline-none bg-slate-600 text-slate-900 lg:text-xl lg:p-3 p-1 " />
                 
                 <div className="flex items-center my-4">
                     <input type="checkbox" className=" mr-4 w-6 h-6 "/>
-                    <label htmlFor="chackbox" className="lg:text-2xl text-slate-300">Remember Me</label>
+                    <label htmlFor="chackbox" className="lg:text-xl text-slate-300">Remember Me</label>
                 </div>
-                <button type='sybmit' className=" lg:text-2xl text-slate-900 bg-slate-400 h-10 lg:h-14 rounded-xl hover:bg-slate-500">Login</button>
+                <button type='sybmit' className=" lg:text-xl text-slate-900 bg-slate-400 h-10 lg:h-12 rounded-xl hover:bg-slate-500">Login</button>
     
                 <div class="flex items-center justify-between">
                     <div className="w-full h-[1px] bg-gray-300"></div>

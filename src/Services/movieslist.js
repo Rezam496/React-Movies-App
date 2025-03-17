@@ -22,7 +22,9 @@ const fetchTv = (page) =>
     );
   };
   
-
+const fetchDetailsPage=(id)=>{
+  return api.get(`https://api.themoviedb.org/3/movie/${id}`,options);
+}
 export {
   fetchMoviesTopRated,
   fetchMovieNew,
@@ -30,4 +32,5 @@ export {
   fetchMoviesPopular,
   fetchTv,
   fetchMovies,
+  fetchDetailsPage,
 };

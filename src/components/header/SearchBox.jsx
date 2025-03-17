@@ -2,7 +2,7 @@ import { CiSearch } from "react-icons/ci";
 
 function SearchBox() {
   return (
-    <section className=" mt-4 text-slate-300 ">
+    <section className=" mt-4 bg-white dark:bg-slate-900 text-slate-900 dark:text-white p-4 ">
         <div className="relative ">
             <input type="text" 
               placeholder='Search for a movie,TV Show or celebrity that you ...' 

@@ -7,8 +7,7 @@ import { useLocation } from 'react-router-dom'
 function Main() {
   const location=useLocation();
   return (
-    <div>
-      {/* {location.pathname==="/"&&<Slider/>} */}
+    <div >
       <MoviesList/>
       <MoviesUpcomingList/>
       <MoviesNewPlaying/>       

@@ -4,14 +4,16 @@ import { Autoplay , Navigation,FreeMode} from 'swiper/modules';
 import 'swiper/css/navigation';
 import { useQuery } from '@tanstack/react-query';
 import { fetchMovieNew } from '../../Services/movieslist';
+import Loader from '../../helper/Loader';
 
 function MoviesNewPlaying() {
    
-    const {data:newplaying}=useQuery({
+    const {data:newplaying,isLoading}=useQuery({
       queryKey:["new-playung"],
       queryFn:fetchMovieNew
     })
-
+    if(isLoading){<Loader/>}
+      
   return (
     <div className="container mx-auto px-4 py-6 ">
       <h2 className="text-2xl font-bold mb-8">🎬 UpComing Movies</h2>

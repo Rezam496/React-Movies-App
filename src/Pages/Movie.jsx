@@ -5,6 +5,7 @@ import MoviesAndTvCard from "../components/Movies/MoviesAndTvCard";
 import ReactPaginate from "react-paginate";
 import { fetchMovies } from "../Services/movieslist";
 import { GoArrowLeft,GoArrowRight } from "react-icons/go";
+import Loader from "../helper/Loader";
 
 function Movie() {
   const [currentPage, setCurrentPage] = useState(1); 
@@ -19,7 +20,7 @@ function Movie() {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
 
   if (isError) {
@@ -28,7 +29,7 @@ function Movie() {
   console.log(data)
   return (
     <>
-      <div className="container flex flex-col mt-28">
+      <div className="container flex flex-col mt-28 bg-white dark:bg-slate-900 text-slate-900 dark:text-white ">
         <ScrollToTop />
         <h2 className="text-2xl font-bold mb-10">🎬 Popular</h2>
         <div className="flex flex-wrap gap-8 justify-center">

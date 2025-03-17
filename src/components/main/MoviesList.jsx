@@ -4,6 +4,7 @@ import { Autoplay , Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import { useQuery } from '@tanstack/react-query';
 import { fetchMoviesTopRated } from '../../Services/movieslist';
+import Loader from '../../helper/Loader';
 
 function MoviesList() {
 
@@ -11,7 +12,8 @@ function MoviesList() {
       queryKey:["rated"],
       queryFn:fetchMoviesTopRated
     });
-   
+    if(isLoading){<Loader/>}
+    
   return (
     <div className="container mx-auto px-4 py-6">
       <h2 className="text-2xl font-bold mb-10">🎬 Top Rated Movies</h2>

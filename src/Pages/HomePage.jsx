@@ -3,7 +3,7 @@ import image from '../assets/bg.jpg'
 function HomePage() {
 
   return (
-  <div> 
+  <div className="bg-white dark:bg-slate-900 text-slate-700 dark:text-white "> 
     <Main/>    
   </div>
   )

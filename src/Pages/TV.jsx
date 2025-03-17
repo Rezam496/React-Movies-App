@@ -5,6 +5,7 @@ import ScrollToTop from '../helper/ScrollToTop';
 import MoviesAndTvCard from '../components/Movies/MoviesAndTvCard';
 import ReactPaginate from "react-paginate";
 import { GoArrowLeft,GoArrowRight } from "react-icons/go";
+import Loader from '../helper/Loader';
 
 function TV() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,7 +21,7 @@ function TV() {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
 
   if (isError) {
