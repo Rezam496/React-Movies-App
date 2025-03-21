@@ -29,15 +29,16 @@ function Movie() {
   console.log(data)
   return (
     <>
-      <div className="container flex flex-col mt-28 bg-white dark:bg-slate-900 text-slate-900 dark:text-white ">
+      <div className="container flex flex-col mt-28 bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
         <ScrollToTop />
-        <h2 className="text-2xl font-bold mb-10">🎬 Popular</h2>
+        <h2 className="text-2xl font-bold mb-10 ">🎬 Popular</h2>
+
         <div className="flex flex-wrap gap-8 justify-center">
           {data?.data.results.map((item) => (
             <MoviesAndTvCard item={item} key={item.id} />
           ))}
         </div>
-        
+
         <ReactPaginate
           previousLabel={<GoArrowLeft />}
           nextLabel={<GoArrowRight />}
@@ -45,16 +46,17 @@ function Movie() {
           onPageChange={handlePageClick}
           forcePage={currentPage - 1}
           containerClassName="flex flex-wrap justify-center items-center space-x-2 lg:space-x-6 mt-28"
-          pageLinkClassName="px-2 py-1 text-lg  rounded-3xl hover:bg-gray-200 hover:text-gray-900 md:px-3 md:py-1 md:text-sm"
-          previousLinkClassName="px- py-2 text-sm  md:px-6 md:py-3 md:text-base"
-          nextLinkClassName="px-4 py-2 text-sm  md:px-6 md:py-3 md:text-base"
+          pageLinkClassName="px-2 py-1 text-lg rounded-3xl hover:bg-gray-200 hover:text-gray-900 md:px-3 md:py-1 md:text-sm"
+          previousLinkClassName="px- py-2 text-sm md:px-6 md:py-3 md:text-base"
+          nextLinkClassName="px-4 py-2 text-sm md:px-6 md:py-3 md:text-base"
           activeClassName="bg-gray-200 text-gray-900 rounded-3xl"
           pageRangeDisplayed={3}
-          marginPagesDisplayed={2} 
+          marginPagesDisplayed={2}
           breakLabel="..."
           breakClassName="text-gray-500"
         />
       </div>
+
     </>
   );
 }

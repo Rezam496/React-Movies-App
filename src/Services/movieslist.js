@@ -9,6 +9,8 @@ const fetchMoviesUpComing = () => api.get("movie/upcoming", options);
 
 const fetchMoviesPopular = () => api.get("movie/popular", options);
 
+
+
 const fetchTv = (page) =>
   api.get(
     `discover/tv?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc`,
@@ -25,6 +27,8 @@ const fetchTv = (page) =>
 const fetchDetailsPage=(id)=>{
   return api.get(`https://api.themoviedb.org/3/movie/${id}`,options);
 }
+
+
 export {
   fetchMoviesTopRated,
   fetchMovieNew,
@@ -33,4 +37,5 @@ export {
   fetchTv,
   fetchMovies,
   fetchDetailsPage,
+  
 };
